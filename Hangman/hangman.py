@@ -28,7 +28,7 @@ while count != 8:
     elif answer_user not in (user_used and word_list):
         print("That letter does not appear in the word")
     print(''.join(user_list))
-word_list = list(answer_user)
+word_list = list(answer_prog)
 if user_list != word_list:
     print("You lost!")
 else:
