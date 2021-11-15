@@ -4,6 +4,7 @@ print("The game will be available soon.")
 words = ['python', 'javascript', 'php', 'java']
 answer_prog = random.choice(words)  # python
 word_list = list(answer_prog)
+letter = ""
 user_word_list_null = "-" * len(answer_prog)
 user_list = list(user_word_list_null)
 user_used = []
@@ -12,10 +13,12 @@ count = 0
 while count != 8:
     count += 1
     answer_user = str(input('Input a letter:'))
-    if answer_user in word_list:
+    if answer_user in letter:
         print('No improvements')
         print(''.join(user_list))
         continue
+    else:
+        letter += answer_user
     user_used.append(answer_user)
     if answer_user in word_list:
         if word_list.count(answer_user) >= 2:
