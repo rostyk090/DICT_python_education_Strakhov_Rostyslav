@@ -124,7 +124,7 @@ def take():
     print("I gave you " + str(money))
     money = 0
 def action():
-    print('\nWrite action (buy, fill, take, remsining, exit):')
+    print('\nWrite action (buy, fill, take, remaining, exit):')
     action_user =str(input())
     if action_user == 'buy':
         buy()
@@ -136,7 +136,6 @@ def action():
         take()
         return 'take'
     elif action_user == 'remaining':
-        print('')
         remaining()
         return 'remaining'
     elif action_user == 'exit':
@@ -225,23 +224,19 @@ class CoffeeMachine:
         print('\nWrite action (buy, fill, take, remaining, exit):')
         action_user = str(input())
         if action_user == 'buy':
-            print('')
             objects.buy()
             return 'buy'
         elif action_user == 'fill':
-            print('')
             objects.fill()
             return 'fill'
         elif action_user == 'take':
             objects.take()
             return 'take'
         elif action_user == 'remaining':
-            print('')
             objects.remaining()
             return 'remaining'
         elif action_user == 'exit':
             return 'exit'
-objects = CoffeeMachine()
 while_action = 0
 while while_action != 'exit':
     while_action = action()
