@@ -4,6 +4,7 @@ co = c.count("o")
 c_ = c.count("_")
 win = 0
 
+
 def play():
     print("---------")
     print("| ", end="")
